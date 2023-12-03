@@ -1,0 +1,336 @@
+.App {
+  position: relative;
+  background-image: url("./Imagenes/fondo.png");  
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+#video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url("./Imagenes/felicidades.gif");
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.contFelicidades{
+  z-index: 10 !important;
+}
+
+.cont-inicio{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-jugar{
+  position: absolute;
+  color: #3b1abd;
+  font-weight: 900;
+  margin: auto;
+  padding: 15px 30px;
+  text-align: center;
+  border-radius: 30px;
+  width: 70px;
+  animation: btnJugar 2s linear infinite;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn-jugar::after{
+  position: absolute;
+  content: "Iniciar";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, white,transparent);
+  top: 0;
+  left: 0;
+}
+
+.presentador{
+  z-index: 20;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-image: url("./Imagenes/Carrito_Robot.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: 0;
+  transform: translateX(300px);
+  animation: deslizarPresentador 0.5s linear;
+}
+
+.cont-header{
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-weight: 800;
+}
+
+.cont-ayudas{
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-weight: 800;
+  margin: 50px;
+}
+
+.cont-ayudas>div{
+  background-color: brown;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Max-Score{
+  width: 100%;
+  margin-top: 200px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.tiempo{
+  font-size: 20px;
+  border-radius: 100px;
+  border: 3px solid white;
+  padding: 10px 20px;
+}
+
+.cont-finJuego{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.img-finJuego{
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+/*Estilo del sol INICIO*/
+
+.sol {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: #fdd835; /* Color del sol */
+  border-radius: 50%; /* Hacerlo redondo */
+  animation: rotarcircular 10s linear infinite;
+}
+.sol .contenido{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left:0;
+  background: #020015 ;
+  border-radius: 50%;
+  z-index: 10;
+}
+.rayo {
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  width: 20px;
+  height: 80%;
+  background: white; /* Color del sol */
+  transform-origin: 0% 100%; /* El punto de rotación en la base del rayo */
+  z-index: 1;
+  animation: animaterayo 1s linear infinite;
+}
+
+
+.rayo::before{
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: white;
+  top: 0;
+  left: 0;
+  transform: rotate(-5deg);
+  
+  animation: animaterayo 1s linear infinite;
+}
+.rayo::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: white;
+  top: 0;
+  right: 0;
+  transform: rotate(5deg);
+  
+  animation: animaterayo 1s linear infinite;
+}
+
+@keyframes animaterayo {
+  0%{
+    background-color: white;
+  }
+  50%{
+    background-color: rgba(255, 255, 255, 0.527);
+  }
+  100%{
+    background-color: white;
+  }
+}
+.rayo:nth-child(1) { transform: rotate(30deg); }
+.rayo:nth-child(2) { transform: rotate(60deg); }
+.rayo:nth-child(3) { transform: rotate(90deg); }
+.rayo:nth-child(4) { transform: rotate(120deg); }
+.rayo:nth-child(5) { transform: rotate(150deg); }
+.rayo:nth-child(6) { transform: rotate(180deg); }
+.rayo:nth-child(7) { transform: rotate(210deg); }
+.rayo:nth-child(8) { transform: rotate(240deg); }
+.rayo:nth-child(9) { transform: rotate(270deg); }
+.rayo:nth-child(10) { transform: rotate(300deg); }
+.rayo:nth-child(11) { transform: rotate(330deg); }
+.rayo:nth-child(12) { transform: rotate(0deg); }
+
+
+.contain-iniciar{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes rotarcircular {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moverlinear {
+  0%{
+    background: linear-gradient(180deg,white,transparent);
+  }
+  100%{
+    background: linear-gradient(180deg,transparent,white);
+  }
+}
+
+
+/*Estilo del sol FIN*/
+
+@keyframes deslizarPresentador {
+  0%{
+    transform: translateX(1200px);
+  }
+  100%{
+    transform: translateX(300px);
+  }
+}
+
+@keyframes btnJugar {
+  0%{
+    /* background-color: brown; */
+    background-color: #2a44a5;
+  }
+  50%{
+    /* background-color: #bd6900; */
+    background-color: #00bdac;
+  }
+  100%{
+    /* background-color: brown; */
+    background-color: #2a44a5;
+  }
+}
+
+@media (max-height:700px) {
+    body{
+      font-size: 13px;
+    }
+    .contain-iniciar{
+      margin-top: 50px;
+    }
+    .tiempo{
+      font-size: 14px;
+    }
+    .Max-Score{
+      font-size: 20px;
+      margin-top: 150px;
+      margin-bottom: 30px;
+    }
+    .App{
+      background-position: center -30px;
+    }
+    .cont-ayudas{
+      margin: 20px;
+    }
+    .cont-opciones>div{
+      margin: 10px;
+    }
+    .nombre{
+      margin-bottom: 30px;
+    }
+}
+
+@media (min-width:1900px) {
+  .Max-Score{
+    margin-top: 250px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width:500px) {
+  .App{
+    background-position: center;
+  }
+  body,
+  .tiempo{
+    font-size: 13px;
+  }
+  .Max-Score{
+    margin-top: 150px;
+    margin-bottom: 30px;
+  }
+  .cont-header,
+  .cont-ayudas,
+  .preguntas{
+    width: 300px !important;
+  }
+  .contain-iniciar{
+    margin-top: 70px;
+  }
+  .cont-ayudas{
+    margin: 10px;
+  }
+  .cont-finJuego{
+    margin-top: 50px;
+  }
+}
