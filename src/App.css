@@ -287,7 +287,7 @@
       margin-bottom: 30px;
     }
     .App{
-      background-position: center -30px;
+      background-position: top center;
     }
     .cont-ayudas{
       margin: 20px;
@@ -308,9 +308,6 @@
 }
 
 @media (max-width:500px) {
-  .App{
-    background-position: center;
-  }
   body,
   .tiempo{
     font-size: 13px;
@@ -332,5 +329,25 @@
   }
   .cont-finJuego{
     margin-top: 50px;
+  }
+}
+@media (max-width:800px){
+  .App{
+    background-image: url("./Imagenes/fondo2.png");  
+    background-position: center;
+  }
+}
+
+@media (max-height:500px){
+  .Max-Score{
+    margin-top: 150px;
+  }
+}
+
+@media (max-width:300px) {
+  .cont-header,
+  .cont-ayudas,
+  .preguntas{
+    width: 250px !important;
   }
 }
