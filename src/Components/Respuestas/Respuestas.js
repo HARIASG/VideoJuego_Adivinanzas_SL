@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import "./Respuestas.css"
 import Context from "../../Context";
 
@@ -6,6 +6,15 @@ export const Respuestas=({nombre,opcion,respuesta})=>{
     const btnRespuesta = useRef();
     const {score,setScore,nivel,setNivel,setPreguntaActiva,setListaPreguntas,listaPreguntas,preguntaActiva,setActiva5050,reiniciarContador,setGano} =useContext(Context);
 
+
+    useEffect(()=>{
+        if(preguntaActiva.posiblesRespuestas.filter(el=>el!=="").length===4){
+            btnRespuesta.current.classList.add("animate")
+            setTimeout(() => {
+                btnRespuesta.current.classList.remove("animate")
+            }, 2000);
+        }
+    },[preguntaActiva])
 
     const perdio =()=>{
         setTimeout(()=>{
@@ -96,6 +105,6 @@ export const Respuestas=({nombre,opcion,respuesta})=>{
     }
 
     return(
-        <div className={(nombre!=="" ? "" :"disabled")} ref={btnRespuesta} onClick={()=>seleccionarRespuesta(nombre)}>{(nombre !=="" ? opcion+":" : "")} {nombre}</div>
+        <div className={(nombre!=="" ? "respuesta " :"respuesta disabled")} ref={btnRespuesta} onClick={()=>seleccionarRespuesta(nombre)}>{(nombre !=="" ? opcion+":" : "")} {nombre}</div>
     );
 }

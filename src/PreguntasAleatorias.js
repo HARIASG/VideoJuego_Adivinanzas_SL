@@ -131,7 +131,7 @@ export const PreguntasSoftware=[
     },
     {
         id:11,
-        nivel:"2",
+        nivel:"3",
         estado:true,
         pregunta:"¿Cuál de las afirmaciones sobre 'GNU' es correcta en el contexto de software libre?",
         posiblesRespuestas:[
@@ -144,7 +144,7 @@ export const PreguntasSoftware=[
     },
     {
         id:12,
-        nivel:"2",
+        nivel:"3",
         estado:true,
         pregunta:"¿Cómo se llama el software que es gratuito pero no necesariamente de código abierto?",
         posiblesRespuestas:[
@@ -185,19 +185,6 @@ export const PreguntasSoftware=[
         id:15,
         nivel:"3",
         estado:true,
-        pregunta:"¿Cuál es el término para un programa que es distribuido junto con su código fuente?",
-        posiblesRespuestas:[
-            "Software libre",
-            "Software propietario",
-            "Software cerrado",
-            "Software binario"
-        ],
-        respuestaCorrecta:"Software libre",
-    },
-    {
-        id:16,
-        nivel:"4",
-        estado:true,
         pregunta:"¿Qué significa 'FLOSS'?",
         posiblesRespuestas:[
             "Software de Código Abierto con Licencia Completa",
@@ -208,7 +195,7 @@ export const PreguntasSoftware=[
         respuestaCorrecta:"Software Libre y de Código Abierto",
     },
     {
-        id:17,
+        id:16,
         nivel:"4",
         estado:true,
         pregunta:"¿Cuál es la libertad que permite combinar partes de diferentes programas para crear uno nuevo?",
@@ -221,7 +208,7 @@ export const PreguntasSoftware=[
         respuestaCorrecta:"Libertad 3",
     },
     {
-        id:18,
+        id:17,
         nivel:"4",
         estado:true,
         pregunta:"¿Qué es el 'código fuente' de un programa?",
@@ -234,7 +221,7 @@ export const PreguntasSoftware=[
         respuestaCorrecta:"El conjunto de instrucciones legibles por humanos que conforman un programa de software",
     },
     {
-        id:19,
+        id:18,
         nivel:"4",
         estado:true,
         pregunta:"¿Cuál es el término para el software que se distribuye sin cargo, pero sin acceso al código fuente?",
@@ -247,7 +234,7 @@ export const PreguntasSoftware=[
         respuestaCorrecta:"Freeware cerrado",
     },
     {
-        id:20,
+        id:19,
         nivel:"4",
         estado:true,
         pregunta:"¿Qué significa 'OSS' en el contexto del software?",
@@ -260,8 +247,8 @@ export const PreguntasSoftware=[
         respuestaCorrecta:"Software de Código Fuente Abierto",
     },
     {
-        id:21,
-        nivel:"5",
+        id:20,
+        nivel:"4",
         estado:true,
         pregunta:"¿Qué significa 'GPL' en el contexto de las licencias de software?",
         posiblesRespuestas:[
@@ -273,7 +260,7 @@ export const PreguntasSoftware=[
         respuestaCorrecta:"Licencia Pública General de GNU",
     },
     {
-        id:22,
+        id:21,
         nivel:"5",
         estado:true,
         pregunta:"¿Qué significa 'LGPL' en el contexto de las licencias de software?",
@@ -286,7 +273,7 @@ export const PreguntasSoftware=[
         respuestaCorrecta:"Licencia Pública General de GNU Menor",
     },
     {
-        id:23,
+        id:22,
         nivel:"5",
         estado:true,
         pregunta:"¿Qué significa 'BSD' en el contexto de las licencias de software?",
@@ -299,7 +286,7 @@ export const PreguntasSoftware=[
         respuestaCorrecta:"Berkeley Software Distribution",
     },
     {
-        id:24,
+        id:23,
         nivel:"5",
         estado:true,
         pregunta:"¿Qué significa 'AGPL' en el contexto de las licencias de software?",
@@ -312,7 +299,7 @@ export const PreguntasSoftware=[
         respuestaCorrecta:"Licencia Pública General de Affero",
     },
     {
-        id:25,
+        id:24,
         nivel:"5",
         estado:true,
         pregunta:"¿Qué significa 'EULA' en el contexto del software?",
@@ -325,7 +312,7 @@ export const PreguntasSoftware=[
         respuestaCorrecta:"Acuerdo de Licencia de Usuario Final",
     },
     {
-        id:26,
+        id:25,
         nivel:"5",
         estado:true,
         pregunta:"¿Qué es un 'upstream' en el desarrollo de software de código abierto?",

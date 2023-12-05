@@ -39,8 +39,9 @@ export const Juego=()=>{
             preguntaActiva.pregunta 
             ?
             <>
-              <div>Pistas</div>
-              <div onClick={()=>setActiva5050(true)}>50/50</div>
+              {/* <div>Pistas</div>
+              <div onClick={()=>setActiva5050(true)}>50/50</div> */}
+              <div style={{marginLeft:"0px",marginRight:"auto"}} onClick={()=>setActiva5050(true)}>50/50</div>
             </>
             :
             <div style={{margin:"auto",marginTop:"20px"}} onClick={handleClickJuagar}>Volver a Jugar</div>

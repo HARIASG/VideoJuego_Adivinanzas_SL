@@ -86,8 +86,10 @@ const ContextProvider =({children})=>{
           }
           else{
             setPreguntaActiva({})
-            document.getElementById("audioPerdiste").play().catch(res=>{})
             clearInterval(eventoIntervalo);
+            if(!gano){
+              document.getElementById("audioPerdiste").play().catch(res=>{})
+            }
           }
         },1000)
 

@@ -16,3 +16,7 @@
     background-color: inherit !important;
     cursor: context-menu !important;
 }
+
+.respuesta{
+    transform: translateX(0px);
+}

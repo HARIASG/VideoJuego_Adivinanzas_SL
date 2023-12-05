@@ -32,10 +32,22 @@ export const Preguntas=({pregunta})=>{
                 <div className="borde-right"></div>
             </div>
             <div className="cont-opciones">
-                <Respuestas opcion={"A"} nombre={pregunta.posiblesRespuestas[0]} respuesta={pregunta.respuestaCorrecta}/>
-                <Respuestas opcion={"B"} nombre={pregunta.posiblesRespuestas[1]} respuesta={pregunta.respuestaCorrecta}/>
-                <Respuestas opcion={"C"} nombre={pregunta.posiblesRespuestas[2]} respuesta={pregunta.respuestaCorrecta}/>
-                <Respuestas opcion={"D"} nombre={pregunta.posiblesRespuestas[3]} respuesta={pregunta.respuestaCorrecta}/>
+                {
+                    pregunta.posiblesRespuestas.map((el,i)=>{
+                        let opcion;
+                        if(i===0)
+                            opcion="A"
+                        if(i===1)
+                            opcion="B"
+                        if(i===2)
+                            opcion="C"
+                        if(i===3)
+                            opcion="D"
+                        return(
+                            <Respuestas key={i} opcion={opcion} nombre={el} respuesta={pregunta.respuestaCorrecta}/>
+                        )
+                    })
+                }
             </div>
         </div>
     )
